@@ -20,7 +20,8 @@ namespace LinkedListStack
                                   "2.LinkedListReverseOrder" + "\n" +
                                   "3.InsertAtParticuarPosition" + "\n" +
                                   "4.RemoveFirstNode" + "\n" +
-                                  "5.Exit" + "\n");
+                                  "5.RemoveLastNode" + "\n" +
+                                  "6.Exit" + "\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -50,8 +51,15 @@ namespace LinkedListStack
                         linkedList.RemoveFirstNode();
                         linkedList.Display();
                         break;
-
                     case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
+                        linkedList.Display();
+                        break;
+
+                    case 6:
                         flag = false;
                         break;
 
