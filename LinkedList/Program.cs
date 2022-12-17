@@ -21,7 +21,8 @@ namespace LinkedListStack
                                   "3.InsertAtParticuarPosition" + "\n" +
                                   "4.RemoveFirstNode" + "\n" +
                                   "5.RemoveLastNode" + "\n" +
-                                  "6.Exit" + "\n");
+                                  "6.SearchNode" + "\n" +
+                                  "7.Exit" + "\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -58,8 +59,14 @@ namespace LinkedListStack
                         linkedList.RemoveLastNode();
                         linkedList.Display();
                         break;
-
                     case 6:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.Search(56);
+                        break;
+
+                    case 7:
                         flag = false;
                         break;
 

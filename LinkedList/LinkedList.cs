@@ -96,6 +96,23 @@ namespace LinkedListProblem
             lastNode.next = null;
             Console.WriteLine("Last element is deleted successfully");
         }
+        //Searching the particular element in linked list
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Element found.. " + value);
+                    return temp;
+                }
+                temp = temp.next;
+
+            }
+            Console.WriteLine("Element not found!!!!!!!!");
+            return default;
+        }
         public void Display()
         {
             Node temp = this.head;
