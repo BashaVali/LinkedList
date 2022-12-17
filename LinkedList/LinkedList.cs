@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedListProblems
+namespace LinkedListProblem
 {
     public class LinkedLists
     {
@@ -68,6 +68,15 @@ namespace LinkedListProblems
             prev.next = newestNode;
             Console.WriteLine("\nValue is Successfully Inserted in LinkedList\nAfter updation....");
             return this.head;
+        }
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            this.head = head.next;
+            Console.WriteLine("First element is deleted successfully");
         }
         public void Display()
         {
