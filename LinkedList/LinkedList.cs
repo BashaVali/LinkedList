@@ -1,12 +1,11 @@
 ﻿using LinkedList;
-using LinkedListProblem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LinkedListProblem
+namespace LinkedListProblems
 {
     public class LinkedLists
     {
@@ -43,6 +42,33 @@ namespace LinkedListProblem
                 head.next = temp;
             }
         }
+        public Node InsertAtParticuarPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            Console.WriteLine("\nValue is Successfully Inserted in LinkedList\nAfter updation....");
+            return this.head;
+        }
         public void Display()
         {
             Node temp = this.head;
@@ -50,7 +76,7 @@ namespace LinkedListProblem
             {
                 Console.WriteLine("LinkedList is empty");
             }
-            Console.Write("LinkedList Reverse order is  : ");
+            Console.Write("LinkedList is as : ");
             while (temp != null)
             {
                 Console.Write(temp.data + " ");

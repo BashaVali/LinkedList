@@ -1,4 +1,4 @@
-﻿using LinkedListProblem;
+﻿using LinkedListProblems;
 using System;
 using System.Collections.Generic;
 
@@ -18,7 +18,8 @@ namespace LinkedListStack
 
                 Console.WriteLine("1.CreateLinkedList\n" +
                                   "2.LinkedListReverseOrder" + "\n" +
-                                  "3.Exit" + "\n");
+                                  "3.InsertAtParticuarPosition" + "\n" +
+                                  "4.Exit" + "\n");
 
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -35,8 +36,14 @@ namespace LinkedListStack
                         linkedList.LinkedListReverseOrder(56);
                         linkedList.Display();
                         break;
-
                     case 3:
+                        linkedList.Add(56);
+                        linkedList.Add(70);
+                        linkedList.InsertAtParticuarPosition(1, 30);
+                        linkedList.Display();
+                        break;
+
+                    case 4:
                         flag = false;
                         break;
 
